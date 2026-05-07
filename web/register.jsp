@@ -27,6 +27,15 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        html {
+            overflow-y: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        html::-webkit-scrollbar {
+            display: none;
+        }
+
         body {
             font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
             background: var(--bg);
@@ -36,6 +45,7 @@
             justify-content: center;
             padding: 24px;
             position: relative;
+            overflow-x: hidden;
         }
 
         body::before {
@@ -402,11 +412,18 @@
             font-size: 12px;
             color: var(--red-500);
             margin-top: 6px;
-            display: none;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: height 0.2s, opacity 0.2s;
             align-items: center;
             gap: 4px;
         }
-        .input-match-error.show { display: flex; }
+        .input-match-error.show {
+            height: 18px;
+            overflow: visible;
+            opacity: 1;
+        }
         .input-match-error svg {
             width: 13px; height: 13px;
             stroke: currentColor;

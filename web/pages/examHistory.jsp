@@ -29,6 +29,23 @@
             --purple-100: #f3e8ff;
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        html {
+            overflow-y: auto;
+            scrollbar-gutter: stable;
+        }
+        html::-webkit-scrollbar {
+            width: 6px;
+        }
+        html::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        html::-webkit-scrollbar-thumb {
+            background: var(--slate-300);
+            border-radius: 3px;
+        }
+        html::-webkit-scrollbar-thumb:hover {
+            background: var(--slate-500);
+        }
         body {
             font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
             background: var(--bg);
@@ -79,9 +96,10 @@
         }
         .topbar-brand h1 {
             font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 20px;
+            font-size: 26px;
             font-weight: 600;
             color: var(--slate-900);
+            letter-spacing: 0.02em;
         }
         .topbar-right {
             display: flex;

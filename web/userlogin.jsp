@@ -24,6 +24,15 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        html {
+            overflow-y: auto;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        html::-webkit-scrollbar {
+            display: none;
+        }
+
         body {
             font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
             background: var(--bg);
@@ -161,7 +170,7 @@
 
         .brand h1 {
             font-family: 'Cormorant Garamond', Georgia, serif;
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 600;
             color: var(--slate-900);
             letter-spacing: 0.02em;
