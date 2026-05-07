@@ -1,0 +1,29 @@
+# Compiled class files
+*.class
+
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Build output
+dist/
+build/
+target/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local configuration (contains database password)
+db.properties
+
+# Temporary files
+*.bak
+*.orig
+*.swp
